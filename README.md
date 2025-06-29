@@ -58,9 +58,15 @@ export default config;
 # 1. Generate initial migration
 npx mikro-orm migration:create --initial
 
+# IF ITS NOT THE FIRST TIME
+npx mikro-orm migration:create --name <custome name>
+
 # 2. Run the migration
 npx mikro-orm migration:up
 
 # 3. Restart your application
 npm run start:dev
 ```
+
+## NOTES
+- 🔖 When building entity, if you bring in other entity pull it like this `../../user/entities/user.entity`
