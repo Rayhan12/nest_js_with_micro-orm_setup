@@ -68,5 +68,19 @@ npx mikro-orm migration:up
 npm run start:dev
 ```
 
+## CMD BLOCKS
+```bash
+ npm install --save @mikro-orm/core @mikro-orm/migrations @mikro-orm/cli @mikro-orm/nestjs
+```
+
+If you want to recursively remove quarantine from the whole node_modules (safer for CLI tools):
+```bash
+xattr -dr com.apple.quarantine node_modules
+```
+
+```bash
+xattr -d com.apple.quarantine node_modules/.bin/mikro-orm
+```
+
 ## NOTES
 - 🔖 When building entity, if you bring in other entity pull it like this `../../user/entities/user.entity`
